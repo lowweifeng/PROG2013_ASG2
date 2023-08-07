@@ -1,4 +1,3 @@
-// Vehicle class
 public class Vehicle {
     private String vehicleNumber;
     private String manufacturer;
@@ -12,7 +11,7 @@ public class Vehicle {
         this.rentalRatePerDay = rentalRatePerDay;
     }
 
-    // Getters and setters for all attributes
+    // Getters and Setters for all attributes
     public String getVehicleNumber() {
         return vehicleNumber;
     }
@@ -50,11 +49,12 @@ public class Vehicle {
         return rentalRatePerDay * numberOfDays;
     }
 
-    // toString method to provide a string representation of the vehicle
+    // toString() method to provide a string representation of the Vehicle
     @Override
     public String toString() {
-        return "Vehicle Number: " + vehicleNumber + "\nManufacturer: " + manufacturer
-                + "\nModel: " + model + "\nRental Rate per Day: RM " + rentalRatePerDay;
+        return "Vehicle Number: " + vehicleNumber +
+                ", Manufacturer: " + manufacturer +
+                ", Model: " + model +
+                ", Rental Rate (RM per day): " + rentalRatePerDay;
     }
 }
-
