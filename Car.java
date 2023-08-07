@@ -1,3 +1,4 @@
+// Car class (subclass of Vehicle)
 public class Car extends Vehicle {
     private int numDoors;
 
@@ -6,7 +7,7 @@ public class Car extends Vehicle {
         this.numDoors = numDoors;
     }
 
-    // Getter and Setter for numDoors attribute
+    // Getter and setter for numDoors
     public int getNumDoors() {
         return numDoors;
     }
@@ -15,19 +16,19 @@ public class Car extends Vehicle {
         this.numDoors = numDoors;
     }
 
-    // Override the toString() method to include Car-specific attributes
+    // Override toString method to provide a string representation of the car, including numDoors
     @Override
     public String toString() {
-        return super.toString() + ", Number of Doors: " + numDoors;
+        return super.toString() + "\nNumber of Doors: " + numDoors;
     }
 
-    // Override the calculateRentalCost method to add RM35 per day for cars with more than two doors
+    // Override calculateRentalCost method to add RM35 per day for cars with more than two doors
     @Override
     public double calculateRentalCost(int numberOfDays) {
-        double rentalCost = super.calculateRentalCost(numberOfDays);
+        double baseCost = super.calculateRentalCost(numberOfDays);
         if (numDoors > 2) {
-            rentalCost += (35 * numberOfDays);
+            return baseCost + (35 * numberOfDays);
         }
-        return rentalCost;
+        return baseCost;
     }
 }
